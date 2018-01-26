@@ -1,0 +1,52 @@
+<html><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta charset="UTF-8">
+<body>
+<h2>MT evaluation</h2>
+<h3><a href='https://www.nist.gov/itl/iad/mig/tools'>BLEU/NIST</a> evaluation tools</h3>
+<p>Implements Papineni et al, 2002 BLEU (IBM), runs original NIST script mteval-v13a.pl.<br>
+On-line cgi packaging: University of Leeds, UK, Centre for Translation Studies, EU FP7 IAPP HyTra project</p>
+<p>This implementation takes just one reference translation</p>
+<h4>&nbsp;</h4>
+<p>&nbsp;</p>
+
+
+
+<form NAME="moses" ACTION="http://smlc12.leeds.ac.uk/cgi-bin/mRunBLEUpl.py" METHOD="POST">
+<p><strong>Test file</strong></p>
+<br>
+
+
+<!--   <input type="hidden" name="mMODL5003M" id="mMODL5003M" value="Y2015" />  -->
+
+<table border='1'>
+<tr>
+
+	<td>
+		<p>
+		<strong>Paste MT-translated output to be tested (tst file)</strong>
+		</p>
+		
+		<textarea  name="f1010tst" cols="80" rows="20"></textarea><br />
+		<p>
+	</td>
+
+	<td>
+		<p>
+		<strong>Paste a human reference translation (ref file)</strong>
+		</p>
+		
+		<textarea  name="f1020ref" cols="80" rows="20"></textarea><br />
+		<p>
+	
+	
+	</td>
+
+</tr>
+
+</table>
+	&nbsp;&nbsp;<input TYPE=SUBMIT value="Score">&nbsp;&nbsp;
+
+<!-- <input TYPE=SUBMIT value="SUBMIT"> --> 
+
+
+</form>
