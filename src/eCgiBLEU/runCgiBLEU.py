@@ -69,8 +69,8 @@ class runCgiBLEU(object):
 		
 		# insert tags:
 		# tags ref
-		STagRefOpen = """<refset trglang="zn" setid="exper2016" srclang="any">
-<doc sysid="ref" docid="1" genre="news" origlang="en">
+		STagRefOpen = """<refset trglang="trglang" setid="exper2016" srclang="srclang">
+<doc sysid="ref" docid="1" genre="any" origlang="orilang">
 <seg id="1">
 """
 
@@ -80,8 +80,8 @@ class runCgiBLEU(object):
 </refset>
 """
 		# tags src
-		STagSrcOpen = """<srcset setid="exper2016" srclang="any">
-<doc docid="1" genre="news" origlang="en">
+		STagSrcOpen = """<srcset setid="exper2016" srclang="srclang">
+<doc docid="1" genre="any" origlang="orilang">
 <seg id="1">
 """
 		STagSrcClose = """
@@ -90,8 +90,8 @@ class runCgiBLEU(object):
 </srcset>
 """
 		# tags tst
-		STagTstOpen = """<tstset trglang="zn" setid="exper2016" srclang="any">
-<doc sysid="google" docid="1" genre="news" origlang="en">
+		STagTstOpen = """<tstset trglang="trglang" setid="exper2016" srclang="srclang">
+<doc sysid="MTSystem" docid="1" genre="any" origlang="orilang">
 <seg id="1">
 """
 		STagTstClose = """
@@ -141,7 +141,7 @@ class runCgiBLEU(object):
 	def compBLEUpl(self):
 		
 		# PathToEvalScript = '/data/bogdan/_oc/_exper/p201701mtbleu/src/p010bleuPl/'
-		PathToEvalScript = '/data/html/corpuslabs/lab201801cgibleu/src/eCgiBLEU'
+		PathToEvalScript = '/data/html/corpuslabs/lab201801cgibleu/src/eCgiBLEU/'
 		
 		SToRun = 'perl ' + PathToEvalScript + 'mteval-v13a.pl -r %s -s %s -t %s\n' % (self.PathNameRef, self.PathNameSrc, self.PathNameTst)
 		# SScores = os.popen('echo \'' + STransTextST + '\' | /data/bogdan/_oc/_exper/p2015corp/src/moses/bin/moses -f ' + SMosesIniFile).read()
