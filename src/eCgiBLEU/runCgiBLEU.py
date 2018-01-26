@@ -17,7 +17,7 @@ class runCgiBLEU(object):
 	'''
 
 
-	def __init__(self, params):
+	def __init__(self):
 		'''
 		running BLEU
 		'''
